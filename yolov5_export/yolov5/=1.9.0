@@ -1,0 +1,31 @@
+Collecting coremltools
+  Downloading coremltools-5.0-cp38-none-manylinux1_x86_64.whl (1.5 MB)
+Collecting onnx
+  Downloading onnx-1.10.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (12.3 MB)
+Collecting scikit-learn==0.19.2
+  Downloading scikit-learn-0.19.2.tar.gz (9.7 MB)
+Requirement already satisfied: protobuf>=3.1.0 in /home/trojan/anaconda3/envs/yolov5_export/lib/python3.8/site-packages (from coremltools) (3.18.1)
+Requirement already satisfied: tqdm in /home/trojan/anaconda3/envs/yolov5_export/lib/python3.8/site-packages (from coremltools) (4.62.3)
+Collecting packaging
+  Using cached packaging-21.0-py3-none-any.whl (40 kB)
+Requirement already satisfied: numpy>=1.14.5 in /home/trojan/anaconda3/envs/yolov5_export/lib/python3.8/site-packages (from coremltools) (1.21.2)
+Collecting sympy
+  Downloading sympy-1.9-py3-none-any.whl (6.2 MB)
+Requirement already satisfied: typing-extensions>=3.6.2.1 in /home/trojan/anaconda3/envs/yolov5_export/lib/python3.8/site-packages (from onnx) (3.10.0.2)
+Requirement already satisfied: six in /home/trojan/anaconda3/envs/yolov5_export/lib/python3.8/site-packages (from onnx) (1.16.0)
+Requirement already satisfied: pyparsing>=2.0.2 in /home/trojan/anaconda3/envs/yolov5_export/lib/python3.8/site-packages (from packaging->coremltools) (2.4.7)
+Collecting mpmath>=0.19
+  Downloading mpmath-1.2.1-py3-none-any.whl (532 kB)
+Building wheels for collected packages: scikit-learn
+  Building wheel for scikit-learn (setup.py): started
+  Building wheel for scikit-learn (setup.py): still running...
+  Building wheel for scikit-learn (setup.py): finished with status 'done'
+  Created wheel for scikit-learn: filename=scikit_learn-0.19.2-cp38-cp38-linux_x86_64.whl size=16919160 sha256=bcdc414aa58d10903653161e2eec42d837b55603be6ca62150500c210b1f1726
+  Stored in directory: /home/trojan/.cache/pip/wheels/4e/7c/d9/ba70b0c81897e6def5992f4a0309db4d992a3b7f67715d1c90
+Successfully built scikit-learn
+Installing collected packages: mpmath, sympy, packaging, scikit-learn, onnx, coremltools
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 0.24.2
+    Uninstalling scikit-learn-0.24.2:
+      Successfully uninstalled scikit-learn-0.24.2
+Successfully installed coremltools-5.0 mpmath-1.2.1 onnx-1.10.1 packaging-21.0 scikit-learn-0.19.2 sympy-1.9

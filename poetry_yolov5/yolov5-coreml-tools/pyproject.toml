@@ -1,0 +1,55 @@
+# Copyright (C) 2021 DB Systel GmbH.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[tool.poetry]
+name = "coreml-tools"
+version = "0.2.1"
+description = "Different scripts to use YOLOv5 with coreml"
+authors = ["Leon De Andrade"]
+license = "Apache 2.0"
+readme = "README.md"
+packages = [
+    { include = "coreml_export", from = "src"}
+]
+
+[tool.poetry.dependencies]
+# Common
+python = ">=3.7, <3.9"
+yolov5 = { path = "../yolov5", develop = true }
+
+[tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
+
+# coreml export 
+coremltools = "^4.1"
+yolov5 = { path = "../yolov5", develop = true }
+
+# Workaround for Windows
+torch = [
+    {version = "=1.7.0", markers="sys_platform != 'win32'"},
+    # {url = "https://download.pytorch.org/whl/cu102/torch-1.6.0-cp38-cp38-win_amd64.whl", python = "~3.8", markers = "sys_platform == 'win32'"}
+]
+torchvision = [
+    {version = "=0.8.0",  markers = "sys_platform != 'win32'"},
+    # {url = "https://download.pytorch.org/whl/cu102/torchvision-0.7.0-cp38-cp38-win_amd64.whl", python = "~3.8", markers = "sys_platform == 'win32'"}
+]
+
+[tool.poetry.scripts]
+coreml-export = "coreml_export.main:main"
+coreml-test = "coreml_export.test:main"
+coreml-metrics = "coreml_metrics.main:main"
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

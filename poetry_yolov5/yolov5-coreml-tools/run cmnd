@@ -1,0 +1,2 @@
+poetry run coreml-export --model-input-path '/home/trojan/Desktop/temp/best/best.pt' --model-output-directory '/home/trojan/Desktop/temp/output' --model-output-name 'yolov5-iOS'
+
